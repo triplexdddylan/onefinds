@@ -1,0 +1,33 @@
+:root {
+  /* Background & glass */
+  --bg: #0a0a0a;
+  --glass: rgba(24, 24, 24, 0.30);
+  --hairline: rgba(255, 255, 255, 0.06);
+
+  /* Text colors */
+  --text-90: rgba(255, 255, 255, 0.90);
+  --text-60: rgba(255, 255, 255, 0.60);
+
+  /* Focus / ring */
+  --ring: rgba(255, 255, 255, 0.12);
+
+  /* Border radius */
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-20: 20px;
+  --radius-24: 24px;
+  --radius-28: 28px;
+
+  /* Spacing scale */
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-60: 60px;
+
+  /* Shadows */
+  --shadow-outer: 0 8px 24px rgba(0, 0, 0, 0.4);
+}

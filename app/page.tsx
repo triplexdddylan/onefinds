@@ -12,6 +12,7 @@ export default function Home() {
           height={38}
           priority
         />
+
         <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
           <li className="mb-2 tracking-[-.01em]">
             Get started by editing{" "}
@@ -20,9 +21,7 @@ export default function Home() {
             </code>
             .
           </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
+          <li className="tracking-[-.01em]">Save and see your changes instantly.</li>
         </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
@@ -50,7 +49,37 @@ export default function Home() {
             Read our docs
           </a>
         </div>
+
+        {/* --- Liquid Glass Demo Panel (temporary) --- */}
+        <div className="glass w-full max-w-xl p-6 mt-6">
+          <h2 className="text-xl mb-2">Liquid glass demo</h2>
+          <p className="text-[15px]" style={{ color: "var(--text-60)" }}>
+            If you can see a softly frosted panel with a hairline border and subtle shadow,
+            your tokens and globals are wired correctly.
+          </p>
+          <div className="hr-hairline my-4" />
+          <div className="flex items-center gap-3">
+            <button
+              className="px-4 py-2 rounded-[12px] transition-transform active:scale-[0.98]"
+              style={{
+                background: "rgba(255,255,255,0.06)",
+                border: "1px solid rgba(255,255,255,0.08)",
+              }}
+            >
+              Test Button
+            </button>
+            <a
+              href="#"
+              className="underline underline-offset-4"
+              style={{ color: "var(--text-90)" }}
+            >
+              Focus ring & contrast check
+            </a>
+          </div>
+        </div>
+        {/* --- End demo panel --- */}
       </main>
+
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -58,13 +87,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
+          <Image aria-hidden src="/file.svg" alt="File icon" width={16} height={16} />
           Learn
         </a>
         <a
@@ -73,13 +96,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
+          <Image aria-hidden src="/window.svg" alt="Window icon" width={16} height={16} />
           Examples
         </a>
         <a
@@ -88,13 +105,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
+          <Image aria-hidden src="/globe.svg" alt="Globe icon" width={16} height={16} />
           Go to nextjs.org →
         </a>
       </footer>
