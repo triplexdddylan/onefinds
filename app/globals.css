@@ -1,17 +1,18 @@
 @import "tailwindcss";
 @import '../styles/tokens.css';
 
-/* === Next.js starter theme variables (keep intact) === */
+/* === Replace @theme with plain CSS vars (no lint warnings) === */
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
 
-@theme inline {
+  /* keep these for the starter buttons/text */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* fonts (fallbacks so no errors) */
+  --font-sans: var(--font-geist-sans, Arial, Helvetica, sans-serif);
+  --font-mono: var(--font-geist-mono, ui-monospace, SFMono-Regular, Menlo, monospace);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,11 +22,11 @@
   }
 }
 
-/* === Base page styles === */
+/* === Base page styles (use your tokens) === */
 body {
-  background: var(--bg);          /* from tokens.css */
-  color: var(--text-90);          /* from tokens.css */
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);     /* from tokens.css */
+  color: var(--text-90);     /* from tokens.css */
+  font-family: var(--font-sans);
 }
 
 /* === Utility classes === */
@@ -44,3 +45,9 @@ body {
   height: 1px;
   background: var(--hairline);
 }
+
+/* --- Polyfills so the starter keeps working without @theme --- */
+/* Tailwind v4's @theme used tokens like bg-foreground / text-background.
+   We mimic them here using plain CSS so no red underline, no visual change. */
+.bg-foreground { background-color: var(--color-foreground) !important; }
+.text-background { color: var(--color-background) !important; }
